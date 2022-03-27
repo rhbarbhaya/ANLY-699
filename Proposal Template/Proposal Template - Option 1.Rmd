@@ -1,0 +1,94 @@
+---
+title             : "The title"
+shorttitle        : "Title"
+
+author: 
+  - name          : "First Author"
+    affiliation   : "1"
+    corresponding : yes    
+    address       : "Postal address"
+    email         : "my@email.com"
+
+affiliation:
+  - id            : "1"
+    institution   : "Harrisburg University of Science and Technology"
+
+authornote: |
+  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+
+  Enter author note here.
+
+abstract: |
+  blahblahblah
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["Bibliography.bib"]
+
+figsintext        : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : yes
+
+lang              : "english"
+class             : "man"
+output            : papaja::apa6_pdf
+citation_package  : biblatex
+nocite            : | 
+                      @*
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+library("knitr")
+r_refs("Bibliography.bib")
+```
+  
+***Instructions for Troubleshooting Code [DELETE INSTRUCTIONS AFTER]***
+If problems knitting, try these solutions in order:
+1. Run in console: tinytex::install_tinytex()
+
+2. Download: https://miktex.org/download
+
+3. Run in console: devtools::install_github("crsh/papaja@devel")
+***Instructions for Troubleshooting Code [DELETE INSTRUCTIONS AFTER]***
+
+  Introduction paragraph. [Introduce topic, why is it important, why should your reader care]. The goal of this project is ...
+
+## Subheading 1
+
+## Subheading 2
+
+  The purpose of this study is ... Using data X, I address the following research questions by ...
+  
+  H1:
+  
+  H2:
+
+# Methods
+
+## Data
+
+## Predictors
+
+## Outcome
+
+## Data Analytic Plan
+
+
+
+
+
+# Results
+
+# Discussion
+
+
+\newpage
+
+# References
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
