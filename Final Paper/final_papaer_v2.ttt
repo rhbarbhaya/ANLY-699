@@ -1,0 +1,19 @@
+\begin{lltable}
+
+\begin{longtable}{lllllllll}\noalign{\getlongtablewidth\global\LTcapwidth=\longtablewidth}
+\caption{\label{tab:aviation-flights}Domestic flights from 1990 to 2021 for all the major airlines in the USA}\\
+\toprule
+Observations & \multicolumn{1}{c}{Carrier} & \multicolumn{1}{c}{Carrier\_Name} & \multicolumn{1}{c}{Origin\_Airport\_ID} & \multicolumn{1}{c}{Origin} & \multicolumn{1}{c}{Destination\_Airport\_ID} & \multicolumn{1}{c}{Destination} & \multicolumn{1}{c}{Year} & \multicolumn{1}{c}{Month}\\
+\midrule
+\endfirsthead
+\caption*{\normalfont{Table \ref{tab:aviation-flights} continued}}\\
+\toprule
+Observations & \multicolumn{1}{c}{Carrier} & \multicolumn{1}{c}{Carrier\_Name} & \multicolumn{1}{c}{Origin\_Airport\_ID} & \multicolumn{1}{c}{Origin} & \multicolumn{1}{c}{Destination\_Airport\_ID} & \multicolumn{1}{c}{Destination} & \multicolumn{1}{c}{Year} & \multicolumn{1}{c}{Month}\\
+\midrule
+\endhead
+6801406 rows and 9 columns & Unique value of the airline carrier & Full name of the airline carrier & Code of the airport from where the aircraft took flight & Name of the place the airline took off & Code of the airport where the aircraft landed & Full name of the destination airport & Timestamp of when the aircraft took flight & Timestamp of when the aircraft took flight\\
+format: NA & format: string & format: string & fomat: interger & format: string & format: integer & format: string & format: YYYY & format: MM\\
+\bottomrule
+\end{longtable}
+
+\end{lltable}
