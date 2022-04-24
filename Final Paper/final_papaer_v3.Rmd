@@ -1,0 +1,502 @@
+---
+title             : "An analysis on Safety and Impact on the Job Market caused by Automation"
+shorttitle        : "Safety and Jobs in Automated World"
+
+author: 
+  - name          : "Rushabh Hitesh Barbhaya"
+    affiliation   : "1"
+    corresponding : yes
+    address       : "326 Market St, Harrisburg, PA 17101"
+    email         : "RBarbhaya@my.harrisburgu.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Harrisburg University of Science and Technology"
+
+authornote: |
+  This paper is for the Harrisburg University of Science and Technology's graduate course of Analytics GRAD 695 & ANLY 699. This paper uses actual research for analysis. All the research done by this paper can is reproducible. This document not peer reviewed and peer tested and is therefore for internal use of Harrisburg University of Science and Technology. This research should not be used as a reference in professional study and research.
+
+abstract: |
+  PlaceHolder
+  
+keywords          : "Automation, Jobs, Aviation, Self Driving Cars, Engineering, Science, Production, Safety, Lifestyle"
+wordcount         : "3,484"
+
+bibliography      : ["./ref.bib", "./ref.bib"]
+
+floatsintext      : yes
+figurelist        : yes
+tablelist         : yes
+linkcolor         : "blue"
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+header-includes:
+  - |
+    \makeatletter
+    \renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+      {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+      {-1em}%
+      {\normalfont\normalsize\bfseries\typesectitle}}
+    
+    \renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{1em}%
+      {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+      {-\z@\relax}%
+      {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+    \makeatother
+
+csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
+documentclass     : "apa7"
+output            : papaja::apa6_pdf
+classoption       : "man"
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+library("dplyr")
+r_refs("./ref.bib")
+my_citations <- cite_r(file = "./ref.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+Artificial Intelligence, Machine Learning, Robots, Automation usually outline the news as the cause for mass layoffs, for example, as observed by @mackie_2021. @mcclure2018you has similarly observed a correlation between the rise of mainstay automated solutions and growing health and safety concerns. The concern for technology replacing jobs has been known and documented since the 16th century. @hills1989william and @fleming2020short notes observe that, in 1589, William Lee's invention of the machine that made stockings had caused a riot in the country. The book "The Luddites; Machine-Breaking in Regency England," authored by @thomis1972luddites published in 1972, notes the rise of Luddism. Luddism is a working-class movement asking technology to work with employees and not against them. A modern scripture, "The Digital Divide" by @nie2001internet, has a unique perspective on this. The digital divide refers to the rift caused by a lack of access to information across gender, race, and age, among other demographic keys. @nie2001internet observe that the gap is narrowing in current times. @robinson2003new pushes findings by @nie2001internet a bit further and notices the information's bias. However, they do not account for future and future technology.
+
+An article by @smith_2019 states that 50% of Americans believe that Robots will replace innumerable jobs across the industry. The critical point is that 80% believe that their jobs will be secure. It seems counterintuitive, but humans always find a more specialized role, which is not surprising. @acemoglu2011skills outlines the same observations. They observed a decline in low-skilled jobs, raising differences between each level of workers. @acemoglu2011skills observe that computers replace jobs where cognitive skills and manual input are obligatory. The author did not break down the observations across different industrial sectors where the writer will be observing the results. Authors also published another article @autor2003skill, noting an increased skill level of an employee in computer-intense industries. This time the author only focused on technology-focused industries and missed out on observing the same trend across other industrial sectors, which is the focus of this research. Humans also fear "being left behind," says @song2003being, and will always try to cover the skills they offset. Illustrated by other papers in this article, we observe a decline in low-skill jobs that are labor-intensive jobs.
+
+# Automation in varioius industires
+@abernathy1975technology observes the evolution of manual processes. A process that starts as simple logic; evolves into a complex one over time. This evolution in process generates inefficiencies. Machines are employed to bring back the lost inefficiencies in the system. The author did not account for how these trends are observed in different industrial sectors. @evangelista2012impact balances out the corporate perspective and speaks for human evolution. As robots take on menial jobs, humans find a more specialized roles. Those specialized roles spikes growth and knowledge. Similarly, @bainbridge1982ironies describes how automation can work in tandem with humans. Humans can take more managerial roles and let machines handle the rule-based task.
+
+## Aviation
+At the time of writing, the airline industry is almost automated. Auto-pilot, take-off and landing assistance, navigation, and other critical functions are automated. However, we still see pilots in the cockpit, monitoring the systems and ensuring everything runs smoothly. @stanton1996fly @berberian2012automation also talks about automation in aviation and demonstrates that automation decreases response time and risks. Unfortunately, the authors do not dive much into the increasing reliance on technology, converting the human to a checker role, checking what the robot does, and correcting it for any issues.
+
+## Transportation
+The transportation industry is moving towards automated driving systems. (@rice2019driverless) Waymo and Tesla are leading that, among others. They are already saving lives, and @lala2020autonomous shows that the better the automated systems get, the fewer losses to human lives. @schwall2020waymo, their report mentions the automated systems have already made ways in saving lives. Until driverless cars or self-driving vehicles become a mainstay, @ward2000automation proposes developing an Adaptive Cruise Control system that helps reduce errors and accidents. A need for this cruise control arises because humans have an inherent tendency to make errors as they work on multiple tasks at a time. Having a dedicated machine would help in preventing the loss of lives. The paper does not talk about a merger of these technologies.
+
+## Manufacturing
+The manufacturing industry has utilized robots and artificial intelligence the most among all other sectors. @jamsa2007future talks about how modern industries utilize automation to deliver a reliable product. They use machines anywhere from research and development to marketing the product. The chemical industry is the biggest one (@jamsa2007future). However, the authors missed extending those mechanical knowledge/skills to other industrial sectors.
+
+## Healthcare
+Automation is also taking its place in healthcare with Machine Learning (ML) and Artificial Intelligence (AI), outlined by @davenport2019potential. This article points out the advances ML, and AI have brought to the field. The article also points out how a bit of value changes and misdiagnose. ML and AI are still evolving in this field, and the author(s) believe they will have a significant role as the models and data evolve. This paper is an overall approach to future possibilities, current use, current limitations, and live results.
+
+## Agriculture
+@mahmud2020robotics enlighten us about how automation is used in agriculture. Agriculture, at a point in history, was the only job. However, it now has a tiny population engaged in it. Agriculture is probably where automation is heavily relied upon for a consistent output. Additionally, @sarangi2016automation demonstrates how automation is used to deal with crop diseases. @mohanraj2016field talks about how Internet-of-things can be used to yield a better crop with minimum wastage. A farmer would not be able to monitor their farms without additional help. Internet Of Things could help in those cases and notify any minor change in the field. Also, take measures to avoid harm to the crops. These articles are a good source for understanding how robots and humans can work towards achieving a consistent output and saving time.
+
+## Future
+We are at such a place in the world where we can deploy another robot to check and validate the other one. @peleska1996test talks about setting a safety standing for reactive systems. Reactive systems kick in when they see an error and try to correct them. The authors proposed a system, when realized, acts as a check before kicking the reactive system of an automation response of a machine. Although, the authors missed the point of humans checking the robot's checked work. Ensure that there are no false positives and false negatives in the response. @daily2017self looks at how when a machine is released in the real world would be affected by three things. 1. Government regulation, 2. Interference of historical perception to new technologies implementation, and 3. Future. The author missed adding public acceptance of technology. There are many unknowns, but in the end, humans always accept machines as they are convenient and safe. @badue2021self tests out how each self-driving car's system operates and functions. All the functions they tested were industry standards. Most functions of machines were hidden from the authors, but safety standards were maintained as per their independent testing. \
+
+@badue2021self suggests a hypothetical scenario for self-driving cars and a potential lawsuit. The authors leave an open-ended question after walking through each of the scenarios. The end goal of this exercise is to answer the question, which is to blame when technology is involved in an accident with humans. @strawn2016automation describes an open-ended question about what happens when the future is entirely automated. Will it cause a utopia or a dystopia? Proving sound arguments on both ends. \
+
+## Hypothesis
+The formulated hypothesis extracts data from the aviation industry, which is already at a higher automation level and translates those results to the motor vehicle industry.
+
+### Hypothesis 1
+Automated systems in the aviation industry result in the loss of jobs.
+
+### Hypothesis 2
+Automated systems in the aviation industry will result in the loss of lives.
+
+# Method
+This research aims to extract data from the aviation industry and extrapolate the results to the automobile industry. The Department of Transportation, The Bureau of Labor Statistics, and the Department of Transportation Statistics are primary data sources for this analysis. \
+
+## Procedures
+The first step in this analysis is to clean, treat outliers and normalize the data. Cleaning the data entails checking for formatting issues, excluding unwanted data that impact execution speed. A correctly formatting the data to the correct data type used in the analysis. Converting percent to 0-1 normalized values wherever required to improve the speed of the analysis. \
+
+Outliers are subjective. Outliers affect the final results of the analysis. Outliers may skew the results in any direction; therefore, it becomes essential to identify and treat them accordingly. \
+It is essential to normalize data that spans multiple years to a joint base. Treating safety reports and employment records to parts per thousand is the first step before performing any analysis. This makes a comparison on equal terms. \
+
+## Tools of automation
+@R-base with @R-papaja created this paper and @python.org_2021 for modeling and plotting graphs for these analyses. @rhbarbhayagit hosts the code used for this analysis \
+
+## Aviation Industry
+The focus of this paper is to extract and generate insights from the heavily automated aviation industry and speculate on the results of the motor vehicle industry. The motor vehicle industry is steadily moving towards complete automation. @beresnevicius_2019 analysis says that the flying, landing, breaking, and take off are already automated in the commercial aviation industry. When writing this paper, Tesla and Waymo are already testing their version of "auto-pilot" systems. These "auto-pilot" or self-driving features move the driver from an active role to a passive role. US Department of Transportation and National Highway Traffic Safety Administration @levelsofautomation have documented a roadmap for moving to utterly automated driving. They have categorized levels of automated driving from Level 0 to Level 5. \
+
+Level 0 is "Momentary Driver Assistance," things like warning lights and notifications. Level 1 is "Driver Assistance"; the vehicle provides some assistance to the driver. Adaptive cruise control and lane assistance are some examples of Level 1 assistance. Level 2 is "Additional Assistance" here, and the vehicle assists in acceleration, braking, also steering. Level 3 is "Conditional Automation" we have not reached this level of automation at the time of this article. Level 3 is where the system takes over, and a driver must be behind the wheel to take over at any point. Waymo and Tesla are piloting this system but are not entirely out of testing yet. Level 4 is "High automation" this level of automation is where there is no need for a human driver under some conditions. Humans can act as passengers in this level of automation. Level 5 is "Full Automation"; there is no need for a human driver. Systems are wholly automated at all levels and under all conditions. The automation levels mentioned put the aviation industry at level 4 automation. The pilots are mostly monitoring systems that are in place to help the airline fly safely but take over whenever needed. \
+
+The aviation data has three segments; 1. The number of flights that have taken off in the USA, 2. Aviation incidents through history, and 3. History of jobs in the aviation industry. \
+
+### Flights in the USA
+To understand the automation in the aviation industry, it is important to understand the number of flights that have taken off from the land of the USA. It, directly and indirectly, gives us a sense of how the population perceives the aviation industry as a whole. One of the factors for understanding safety in the aviation industry would be utilizing the services. Economics and logistics are also important factors in the industry, but they do not fall within the scope of this research. @btstransstats provides the dataset of flight count in the USA. @AirlineI37 hosts the key to this dataset. The description of the table \@ref(tab:aviation-flights) \
+
+```{r aviation-flights, fig.align='center'}
+flights_table <- data.frame(
+  'Column' = c(
+    'Carrier',
+    'Carrier Name', 
+    'Origin Airport ID', 
+    'Origin', 
+    'Destination Airport ID', 
+    'Destination', 
+    'Year', 
+    'Month'
+    ),
+  'Context' = c(
+    'Unique value of the airline carrier',
+    'Full name of the airline carrier',
+    'Code of the airport from where the aircraft took flight', 
+    'Name of the place the airline took off', 
+    'Code of the airport where the aircraft landed', 
+    'Full name of the destination airport',
+    'Timestamp of when the aircraft took flight', 
+    'Timestamp of when the aircraft took flight'
+    ),
+  'Datatype' = c(
+    "string", 
+    'string', 
+    'interger', 
+    'string', 
+    'interger',
+    'string', 
+    'date: yyyy', 
+    'date: mm'
+    )
+)
+apa_table(
+  flights_table,
+  caption='Domestic flights from 1990 to 2021 for all the major airlines in the USA',
+  note='This table has 6801406 rows and 9 columns'
+)
+```
+
+```{r aviation-flights-image, fig.cap="Trend of domestic flights in the USA", warning=FALSE, fig.align = "center", echo = FALSE}
+knitr::include_graphics(
+  "./graphs/Count of flights.png", 
+  dpi = 108
+  )
+```
+
+```{r aviation-jobs-schema}
+aviation_jobs_table <- data.frame(
+  'column' = c(
+    'ID', 
+    'Year', 
+    'Period', 
+    'Label', 
+    'Value',
+    ''),
+  'Context' = c(
+    'Unique identifier for each year', 
+    'Year for the statictic', 
+    'Month of the statictic', 
+    'Month and Year combined for label', 
+    'Year "1" acts as benchmark and subsequest year shows the', 
+    'percent increase/decrease in employement numbers'
+    ),
+  'Datatype' = c(
+    'string', 
+    'date: yyyy', 
+    'date: mm', 
+    'string', 
+    'float', 
+    '')
+)
+apa_table(
+  aviation_jobs_table,
+  caption='Trend of jobs in the aviation industry'
+)
+```
+
+```{r aviation-incidents-schema}
+incidents_table <- data.frame(
+  'column' = c(
+    'Data dimension', 
+    'Scope limited data', 
+    'Duplicates removed', 
+    'event id', 
+    'ntsb number', 
+    'event state', 
+    'event country', 
+    'event year', 
+    'event month', 
+    'fatal injuries on ground', 
+    'minor injuries on ground', 
+    'serious injuries on  ground', 
+    'total injuries on flight', 
+    'minor injuries in flight', 
+    'serious injuries in flight', 
+    'fatal injures in flight', 
+    'total ground injuries', 
+    'total flight injuries', 
+    'total injuries'
+    ),
+  'description' = c(
+    'Data dimension from source',
+    'Data dimension after limiting the scope USA', 
+    'Data after removing duplicates', 
+    'Unique identifier for the event', 
+    'Unique identifier created by the NTSB', 
+    'Name of the state where the event occured', 
+    'Country of the state where the event occured', 
+    'Year (timestamp) of the event', 
+    'Month (timestamp) of the event', 
+    'Fatalities on ground of the event site', 
+    'Minor injuries at the event site', 
+    'Serious injuries at the event site',
+    'Total injuries on flight',
+    'Fatal injuries on flight', 
+    'Minor injuries on flight', 
+    'Serious injuries on flight', 
+    'Calculated Field: Total ground injuries', 
+    'Calculated Field: Total flight injuries', 
+    'Calculated Field: Total injuries'
+    ),
+  'fieldtype' = c(
+    '168461 x 14', 
+    '151665 x 14', 
+    '80728 x 14 ', 
+    'string', 
+    'string', 
+    'string', 
+    'string', 
+    'date: yyyy', 
+    'date: mm', 
+    'integer', 
+    'integer', 
+    'integer', 
+    'integer', 
+    'integer', 
+    'integer', 
+    'integer', 
+    'integer', 
+    'integer', 
+    'integer'
+    )
+)
+apa_table(
+  incidents_table,
+  caption='Trend of incidents in the aviation industry, scope limited to the USA'
+)
+```
+
+```{r aviation-jobs-image, fig.cap="Trend of aviation jobs over the years", warning=FALSE, fig.align='center', echo=FALSE}
+knitr::include_graphics(
+  "./graphs/Jobs in the aviation industry.png", 
+  dpi = 108
+  )
+```
+
+```{r aviation-incident-plot, fig.cap="Trend of injuries across time", warning=FALSE, echo=FALSE, fig.align='center'}
+knitr::include_graphics(
+  "./graphs/flight_injuries.png", 
+  dpi = 108
+  )
+```
+
+The table \@ref(tab:aviation-flights) is a scoped table used for the analysis. There are no `NULL` or `empty` values in the table and therefore do not need to be treated for it. Therefore, this data is derived from official sources and, therefore, not treated. To see the trend for the number of flights in the USA, refer to figure \@ref(fig:aviation-flights-image). A count of flights per year demonstrates the trend of aviation utilization, shown in figure \@ref(fig:aviation-flights-image) \
+
+The flights in the domestic USA had a sudden rise around 2002. With a significant dip in the year 2020 on account of the global pandemic of COVID-19. The following year, the number of flights jumped back to its "normal" trend.
+
+There are no `NULL` and `empty` entries in the dataset from the @AirlineI37. There were not any. Then the dataset is corrected to the expected format for analysis. Finally, a count of records for each year makes the figure @ref(fig:aviation-flights-image).
+
+### Jobs in the aviation industry
+To measure how automation has affected the aviation industry, we observe the jobs in the aviation industry. The Bureau of Labor Statistics @BLSDataV82 provides the data for this analysis. The table \@ref(tab:aviation-jobs-schema) shows the data schema. There are no `NULL` or `empty` values in the data; hence cleanup is not required. Since this data comes directly from the Bureau of Labor Statistics and, therefore, is not scoped for outliers. \
+
+The data is grouped by year and then summed for each year. Modeling the dataset like this will show the trend for aviation jobs across the USA. From the trend, the number of jobs in the aviation industry seems to be increasing over the years, shown in figure \@ref(fig:aviation-jobs-image). There could be many reasons for this, including the rise of cheaper flight carriers, increased demand for flights, and increased connectivity requests from the population, among others.
+
+### Incidents in the aviation industry
+A mandate for new safety standards follows a trend of similar incidents. New automation opportunity arises from these safety standards. Auto-pilot was introduced for long flights to relieve pilots from fatigue. Unpredictable climatic factors at the airports saw the introduction of automatic take-off and landing assistance. Overall the safety standards increase following incidents. @Accident29 provides us with the incident figures with the count of fatalities and injuries. Table \@ref(tab:aviation-incidents-schema) describe the datasets schema. \
+
+The dataset contains `NULL` in the integer columns. `0` replaces the `NULL` records. `Total Ground Injures` and `Total Flight Injuries` are calculated columns to understand the trend of injuries across `year,` displayed in figure \@ref(fig:aviation-incident-plot) \
+
+The plot shows the downward trend of injuries, both in flight and on the ground. The blue plots show the number of ground injuries over the years, and the green plots show the number of flight injuries. Figure \@ref(fig:aviation-incident-plot) is a dual-axis graph to indicate the number of injuries from 1981 to 2021 \
+
+## Automobile Industry
+```{r car-safety-introduction}
+car_safety_table <- data.frame(
+  'Safety Measure' = c(
+    '4 wheel Hydraulic Breaks', 
+    'Safety Glass', 
+    'Seat Belts', 
+    'Crash Test', 
+    'Backup Break System', 
+    'Flat & Smooth Dashboard', 
+    'Rounded Door Handled', 
+    'Rubberised Wipers', 
+    'Padded Read of Front Seat for Rear Passengers', 
+    'Padded Dashboard', 
+    'Front Steel Bulkhead & Safety Chamber', 
+    'Safety Cage',
+    'Standard Disk Breaks',
+    'Bumper Shocks', 
+    '3-point safety belts', 
+    'Elimination of protruding knobs',
+    '4-way Hazard Flashers', 
+    'Uniform P-R-N-D-L gear sequence for automatic transmissions', 
+    'Dual-circuit brake hydraulic system', 
+    'Airbags', 
+    'Central 3rd Break Light Mandate', 
+    'Advanced Break Warning System', 
+    'Anti Skid System', 
+    'Minimum Crush Load Requirement Mandate'
+    ),
+  'Year' = c(
+    '1922', 
+    '1930', 
+    '1930', 
+    '1934', 
+    '1936', 
+    '1937', 
+    '1937', 
+    '1937', 
+    '1937', 
+    '1947', 
+    '1947', 
+    '1949', 
+    '1949', 
+    '1955', 
+    '1959', 
+    '1967', 
+    '1967', 
+    '1967', 
+    '1967', 
+    '1974', 
+    '1986', 
+    '1989', 
+    '2009', 
+    '2009'
+    )
+)
+apa_table(
+  car_safety_table,
+  caption='Vehicle Safety Standards'
+)
+```
+
+```{r car-registration-schema}
+car_registeration_schema = data.frame(
+  'column' = c(
+    'Year', 
+    'Domestic Sales'
+    ),
+  'Description' = c(
+    'Year of car sales', 
+    'Total cars sold in the US'
+    ),
+  'datatype' = c(
+    'date: yyyy',
+    'float'
+    )
+)
+apa_table(
+  car_registeration_schema,
+  caption='Car Sales in the United States'
+)
+```
+
+```{r car-registered, fig.cap="Cars registered in the US", warning=FALSE, echo=FALSE, fig.align='center'}
+knitr::include_graphics(
+  "./graphs/car_sales.png",
+  dpi = 108
+  )
+```
+
+```{r car-accidents-schema}
+car_accidents = data.frame(
+  'column' = c(
+    'ST_CASE',
+    'MONTH', 
+    'YEAR', 
+    'FATALS'
+    ),
+  'Description' = c(
+    'Unique identifier for the car crash register', 
+    'Month of accident', 
+    'Year of accident', 
+    'Injuries and Fatalities'
+    ),
+  'datatype' = c(
+    'string', 
+    'date: mm', 
+    'date: yyyy', 
+    'interger'
+    )
+)
+apa_table(
+  car_accidents,
+  caption='Automobile accidents in the United States by year'
+)
+```
+
+```{r car-incidents, fig.cap="Cars accidents in the US", warning=FALSE, echo=FALSE, fig.align='center'}
+knitr::include_graphics(
+  "./graphs/car_fatalities.png", 
+  dpi = 108
+  )
+```
+
+```{r tesla-deaths-schema}
+tesla_deaths_table = data.frame(
+  'column' = c(
+    'Year',
+    'Deaths',
+    'Autopilot deaths'
+  ),
+  'Description' = c(
+    'Year of the incident',
+    'Deaths of humans involved in that incident',
+    'Deaths caused by autopilot system'
+  ),
+  'datatypes' = c(
+    'date: yyyy',
+    'integer',
+    'integer'
+  )
+)
+apa_table(
+  tesla_deaths_table,
+  caption='Data Schema for the deaths caused by Tesla automobiles',
+)
+```
+
+```{r tesla-deaths, fig.align='center', fig.cap='Time series of the deaths involving Tesla', warning=FALSE, echo=FALSE}
+knitr::include_graphics(
+  "./graphs/tesla_deaths.png",
+  dpi=108
+)
+```
+
+From the authors' point of view, the motor vehicle industry is gaining on the levels of automation. Following the levels of automation defined by @levelsofautomation, the vehicles we drive have moved from level 0 to level 1 with adaptive cruise control systems. Then it jumped from level 1 to level 2, with corporations helping in the 'highway pilot' system. The 'Highway Pilot' system controls the steering and braking systems but still requires human control to signal the systems. At the time of writing, Tesla and Waymo are testing these systems. There are lessons to pick up from the aviation industry with a level 4 to level 5 system. \
+
+Motor vehicles, similar to aviation, have had many safety improvements. It is hard to picture a car without high-powered headlights and turn signals. A simple look at the Wikipedia page for automotive safety will list all the safety improvements and table \@ref(tab:car-safety-introduction) does precisely that @_2022_directory, @straith_2022_history, @runeandrasson_2000_the, @sparke_1999_wayback, @hudson_1936_directory, @chrysler_1937_directory, @plymouth_1937_directory, @dodge_1940_directory, @beverlyraekimes_1996_standard, @_1948_directory, @saab_1949_saab, @jkellyflory_2008_american, @corporation_1955_popular, @volvo_1959_safety, @kashyap_2017_safety, @popa_2009_citroen, @hard_2010_nhtsa. Fatalities dropped with the introduction of these safety standards. \
+
+### Automobile Registered
+Bureau of Transportation Statics provides us with the dataset of the commercial cars registered in the United States (@bureauoftransportationstatistics_2021_annual). The dataset is concise with the number of cars registered for that year. There are no `NULL` or `empty` rows in this dataset and therefore do not require any cleaning. Since the Bureau of Transportation Statistics maintains the data set with the Department of Transportation (@bureauoftransportationstatistics_2021_annual), data is considered accurate. The data is grouped by year from the source, and therefore the graph \@ref(fig:car-registered) needs no processing. This graph is a direct plot of cars registered in the United States. The trend graph shows a noticeable drop in the global recession of 2008. Table \@ref(tab:car-registration-schema) shows the schema of the data. \
+
+### Automobile Incidents
+The trend graph \@ref(fig:car-incidents) shows the impact of introducing safety standards. National Highway Traffic Safety Administration (@anonymous_2016_nhtsa) provides the dataset for automobile accidents over the years. The dataset does not contain `NULL` or `empty.` The federal government maintains this dataset; hence, it does not need to scope for outliers. Table \@ref(tab:car-accidents-schema) references the data schema. The dataset contains multiple columns. The table \@ref(tab:car-accidents-schema) shows the scope of the dataset needed for this analysis. The data graph is created by aggregating the `FATALS` column on `YEAR.`
+
+### Self Driving Automobile Incidents
+The automobile industry is trending toward the driverless standard. Therefore, it is imperative to analyze the incidents involving self-driving cars. At the time of this research, Tesla's involved in 254 deaths on the road. Of these 254 deaths, 24 are caused by Tesla's Autopilot system (@tesladeaths_2022_tesladeathscom), with 16 in the USA. Tesla's first car was released in 2008, and the autopilot was introduced in 2013 @reed_2020_history. These deaths are significantly less than the national average, constituting less than 0.0001% of the whole. The table \@ref(tab:tesla-deaths-schema) shows the data schema in scope for this analysis. Figure \@ref(fig:tesla-deaths) shows the time-series graph involving tesla cars with and without an autopilot system.
+
+# Results
+Aviation, considered a level 4 automation, shows a negligible impact on employment. Moreover, forgiving the dip caused by the global pandemic of COVID-19, the trend is positive. Therefore, concluding that the impact of automation has not resulted in employment loss. Now, consider the safety metric. The number of flights by major airlines in the domestic US has normalized. The incidents, however, are on a sharp downward trend. Incidents include both ground and in-flight accidents. Hence, the conclusion, automation for safety standards save lives. Therefore, there is no significant evidence for our hypothesis to be true from the analysis results. \
+
+We see similar trends in extending our understanding of the aviation industry and projecting it to the automobile industry, primarily focusing on safety, as there is no automation in the commercial section of the automation to draw any analysis. Over the years of including safety standards in the consumer automobile, the fatality numbers are on a negative trend. However, there has been an increase in the past decade. The positive trend correlates with the increase in the number of cars on the road. Similarly, there is a seasonality of fatalities observed over the years. For every increasing trend, a new automative system is introduced to make the roads safer. This trend seems to follow the onslaught of self-driving cars. The consumer section will bring changes in the commercial section as well. Therefore, making the stage for self-driving cars a highly likely event.
+
+# Discussion
+## Result Summary
+It seems highly likely that the lessons from the aviation industry can be extrapolated to the automobile industry. A new safety standard will be introduced, giving way to self-driving and potentially driverless cars for all consumer vehicles shortly. Therefore, making a case for a level 5 automation is highly likely in the coming decades. \
+
+## Limitations
+There are some limitations to this analysis:
+1. An in-depth analysis is warranted for a more decisive result in every section. Each point increase or decrease in the trend needs investigation. Similarly, seasonality in the results has to be studied in-breath and compared with global findings.
+2. Only the United States of America is in scope for this analysis. A European market analysis could add some supporting evidence.
+3. The trend results from America and Europe can be compared with the developing markets to correlate with the global trend. \
+Extending this research to other industrial sectors can support or contradict this analysis. The financial and manufacturing industries can enrich this research with more points.
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
